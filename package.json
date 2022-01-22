@@ -1,0 +1,41 @@
+{
+    "name": "csprp",
+    "version": "1.0.0",
+    "description": "Clip Studio Paint Rich Presence",
+    "main": "index.js",
+    "license": "MIT",
+    "homepage": "https://github.com/Pepijn98/CSP-Discord#readme",
+    "engines": {
+        "node": ">=8"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Pepijn98/CSP-Discord.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Pepijn98/CSP-Discord/issues"
+    },
+    "author": {
+        "name": "Pepijn van den Broek",
+        "email": "pepijn@vdbroek.dev",
+        "url": "https://vdbroek.dev/"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "format": "prettier --write *.js",
+        "lint": "eslint *.js --fix",
+        "pretty": "yarn format && yarn lint"
+    },
+    "dependencies": {
+        "discord-rich-presence": "^0.0.8",
+        "systray2": "^2.1.4",
+        "wql-process-monitor": "^2.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.16.12",
+        "@babel/eslint-parser": "^7.16.5",
+        "eslint": "^8.7.0",
+        "eslint-config-prettier": "^8.3.0",
+        "prettier": "^2.5.1"
+    }
+}
