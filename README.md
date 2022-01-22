@@ -11,3 +11,6 @@ Clip Studio Paint Discord Rich Presence
 - `qckwinsvc --name "ClipStudioPaint" --description "Clip Studio Paint Discord Presence" --script "C:\Path\To\Repo\index.js" --startImmediately`
 
 This will install the script as a windows system service and automatically detect when clip studio paint is opened. Change the script path to where you cloned it before using the command.
+
+## Preview
+<img src="https://b.catgirlsare.sexy/hlnU3fOb7-fA.png">
