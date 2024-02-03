@@ -18,5 +18,8 @@
         "test/**/__snapshots__": true,
         "package-lock.json": true,
         "yarn.lock": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }

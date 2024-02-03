@@ -1,13 +1,15 @@
 {
     "name": "csprp",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Clip Studio Paint Rich Presence",
     "main": "index.js",
     "license": "MIT",
     "homepage": "https://github.com/Pepijn98/CSP-Discord#readme",
     "engines": {
-        "node": ">=8"
+        "node": ">=18"
     },
+    "packageManager": "pnpm@8.2.0",
+    "type": "module",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Pepijn98/CSP-Discord.git"
@@ -21,21 +23,20 @@
         "url": "https://vdbroek.dev/"
     },
     "scripts": {
-        "start": "node index.js",
+        "start": "node --no-deprecation index.js",
         "format": "prettier --write *.js",
         "lint": "eslint *.js --fix",
-        "pretty": "yarn format && yarn lint"
+        "pretty": "pnpm run format && pnpm run lint"
     },
     "dependencies": {
-        "discord-rich-presence": "^0.0.8",
-        "systray2": "^2.1.4",
-        "wql-process-monitor": "^2.0.0"
+        "discord-rpc": "^4.0.1",
+        "wql-process-monitor": "^3.0.1"
     },
     "devDependencies": {
-        "@babel/core": "^7.16.12",
-        "@babel/eslint-parser": "^7.16.5",
-        "eslint": "^8.7.0",
-        "eslint-config-prettier": "^8.3.0",
-        "prettier": "^2.5.1"
+        "@babel/core": "^7.23.9",
+        "@babel/eslint-parser": "^7.23.10",
+        "eslint": "^8.56.0",
+        "eslint-config-prettier": "^9.1.0",
+        "prettier": "^3.2.4"
     }
 }

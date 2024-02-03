@@ -1,27 +1,33 @@
 {
     "root": true,
     "env": {
-        "node": true
+        "node": true,
     },
     "parserOptions": {
         "ecmaVersion": 2022,
-        "parser": "@babel/eslint-parser"
+        "parser": "@babel/eslint-parser",
+        "sourceType": "module",
     },
-    "extends": [
-        "eslint:recommended",
-        "prettier"
-    ],
+    "extends": ["eslint:recommended", "prettier"],
     "rules": {
         "eol-last": ["error", "always"],
-        "indent": ["error", 4, {
-            "SwitchCase": 1
-        }],
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1,
+            },
+        ],
         "no-undef": "off",
-        "quotes": ["error", "double", {
-            "avoidEscape": true
-        }],
+        "quotes": [
+            "error",
+            "double",
+            {
+                "avoidEscape": true,
+            },
+        ],
         "semi": ["error", "always"],
         "semi-spacing": "error",
-        "semi-style": ["error", "last"]
-    }
+        "semi-style": ["error", "last"],
+    },
 }
