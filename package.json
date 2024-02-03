@@ -1,6 +1,6 @@
 {
     "name": "csprp",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Clip Studio Paint Rich Presence",
     "main": "index.js",
     "license": "MIT",

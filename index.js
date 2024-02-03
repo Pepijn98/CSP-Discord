@@ -44,11 +44,11 @@ monitor.on("deletion", () => {
         .catch(console.error);
 });
 
-client.on("ready", async () => {
+client.on("ready", () => {
     console.log("ready");
 
     // Check if CSP is already running when starting the script
-    exec("tasklist", async (_err, stdout) => {
+    exec("tasklist", (_err, stdout) => {
         if (stdout.includes("CLIPStudioPaint.exe")) {
             setActivity()
                 .then(() => console.log("[tasklist] - set activity"))
