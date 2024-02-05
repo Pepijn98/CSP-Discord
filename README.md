@@ -21,3 +21,6 @@ Uninstalling is veru simple
 
 ## Preview
 <img src="https://kyra.vdbroek.dev/images/63f7e9585c5fb6119c0ad490/NibMc-z-g.png">
+
+### TODO
+- system tray (stop/start)
