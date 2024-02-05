@@ -1,10 +1,13 @@
 import { exec } from "child_process";
 import { subscribe } from "wql-process-monitor";
+import { EventLogger } from "node-windows";
 import RPC from "discord-rpc";
 
 const client_id = "934221567242690561";
 
 RPC.register(client_id);
+
+const log = new EventLogger("CSPDiscord");
 
 // Monitor for CSP to launch or exit
 const monitor = await subscribe({
@@ -32,32 +35,32 @@ async function setActivity() {
 // Triggers when CSP openes
 monitor.on("creation", () => {
     setActivity()
-        .then(() => console.log("[creation] - set activity"))
-        .catch(console.error);
+        .then(() => log.info("[creation] - set activity"))
+        .catch(log.error);
 });
 
 // Triggers when CSP closes
 monitor.on("deletion", () => {
     client
         .clearActivity()
-        .then(() => console.log("clear activity"))
-        .catch(console.error);
+        .then(() => log.info("clear activity"))
+        .catch(log.error);
 });
 
 client.on("ready", () => {
-    console.log("ready");
+    log.info("ready");
 
     // Check if CSP is already running when starting the script
     exec("tasklist", (_err, stdout) => {
         if (stdout.includes("CLIPStudioPaint.exe")) {
             setActivity()
-                .then(() => console.log("[tasklist] - set activity"))
-                .catch(console.error);
+                .then(() => log.info("[tasklist] - set activity"))
+                .catch(log.error);
         }
     });
 });
 
 client
     .login({ clientId: client_id })
-    .then(() => console.log("logged in"))
-    .catch(console.error);
+    .then(() => log.info("logged in"))
+    .catch(log.error);

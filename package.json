@@ -1,6 +1,6 @@
 {
-    "name": "csprp",
-    "version": "1.1.1",
+    "name": "csp-discord",
+    "version": "1.2.0",
     "description": "Clip Studio Paint Rich Presence",
     "main": "index.js",
     "license": "MIT",
@@ -26,10 +26,13 @@
         "start": "node --no-deprecation index.js",
         "format": "prettier --write *.js",
         "lint": "eslint *.js --fix",
-        "pretty": "pnpm run format && pnpm run lint"
+        "pretty": "pnpm run format && pnpm run lint",
+        "svc-install": "node service.js --install",
+        "svc-uninstall": "node service.js --uninstall"
     },
     "dependencies": {
         "discord-rpc": "^4.0.1",
+        "node-windows": "1.0.0-beta.8",
         "wql-process-monitor": "^3.0.1"
     },
     "devDependencies": {
