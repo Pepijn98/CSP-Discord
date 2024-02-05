@@ -5,7 +5,7 @@ Clip Studio Paint Discord Rich Presence
 - NodeJS
 
 ## Usage
-You can use any package manager you want `npm`, `pnpm`, `yarn`, for this example I'll stick to the default that comes with node itself `npm`.
+You can use any package manager you want `npm`, `pnpm`, `yarn`, for these instructions I'll stick to the default that comes with node itself `npm`.
 
 - Clone this repo anywhere you like
 - In the repo folder do `npm install`, this will install all the required dependencies
@@ -14,7 +14,7 @@ You can use any package manager you want `npm`, `pnpm`, `yarn`, for this example
 - If no errors appeared it should be ready.
 
 ## Uninstall system service
-Uninstalling is veru simple
+Uninstalling is very simple
 - Go to the directory where you cloned/installed this project
 - Now run `npm run svc-uninstall`
 - The service is uninstalled and you're safe to delete this directory
