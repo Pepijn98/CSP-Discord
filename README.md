@@ -24,3 +24,4 @@ Uninstalling is very simple
 
 ### TODO
 - system tray (stop/start)
+- put details and state presence options in a config file for easy customization
